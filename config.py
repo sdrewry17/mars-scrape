@@ -1,0 +1,5 @@
+api_key = "Mi4sXZHsegyqjsu6wb6lDKHIa"
+api_secret = "qLtExvKUVLVJ8OsEplmDdUKrQcoEXFjVH1MFbAhNK9AEJ3jEFa"
+access_token = "32025249-ofJuEnS4ratwzRDmwAqqdUti9m8sJTsSH8H2ni2bN"
+access_secret = "Ey2DfqT6XKl13rPh1TOqdsXw8LBuPFmPp2mmvPDxVyKEk"
+owm_api_key = "007522281783d4730d29934c4cedb694"

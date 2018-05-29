@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+    <title>Mars Facts</title>
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <div class = "container-fluid"></div>
+      <nav class="navbar navbar-expand-sm navbar-dark bg-primary" role="navigation">
+        <div class = "navbar">
+          <a class="navbar-brand" href=#>Mars Analysis</a>
+        </div>
+        <div class = "navbar-collapse navbar-right">
+          <a class="btn btn-dark" href="/scrape" role="button">Click to refresh</a></p>
+        </div>
+      </nav>
+    </div>
+    <div class = "row">
+      <div class = "container-fluid col-sm-8">
+          <br>
+          <h2 class = "jumbotron">Mars Analysis</h2>
+          <figure class = "figure">
+              <img class = "figure img img-fluid rounded" src = {{img_url}} width=600>
+              <figcaption class = "figure-caption text-right">Source: Astrogeology {{astro_url}}</figcaption>
+          </figure>
+          <h3>Mars is an interesting place!</h3>
+          <p>This was a useful project showcasing various tools to collect, store, and return live data to a webpage.</p>
+          <ul>
+              <li>Python - Program used to control tasks, using multiple libraries</li>
+              <li>Beautiful Soup - Python library used to parse html data</li>
+              <li>Splinter - Python library used to control a web browser and navigate to different parts of websites</li>
+              <li>Tweepy - Python API wrapper to pull data from the Twitter API</li>
+              <li>Pandas - Python library used to read an HTML page into a DataFrame</li>
+              <li>Flask - Python library used to connect html to python objects</li>
+              <li>MongoDB - NoSQL database</li>
+              <li>PyMongo - Python connector for MongoDB</li>
+              <li>Flask PyMongo - Python connector MongoDB using Flask</li>
+          </ul>
+      </div>
+      <div class = "container-fluid col-sm-4">
+        <div>
+          <h4>Current Mars Weather</h4>
+          <p>{{weather}}</p>
+          <a href: "https://twitter.com/MarsWxReport" >@{{tweeter}}</a>
+        </div>
+        <div>
+          <figure class = "figure">
+            <a href = {{cerberus_img}}>
+              <img class="img-responsive figure img img-fluid rounded" src = "templates/Thumb1.png" width=200>
+            </a>
+            <Figcaption>
+                Cerberus
+            </Figcaption>
+          </figure>
+          <figure class = "figure">
+            <a href = {{schiaparelli_img}}>
+              <img class="img-responsive figure img img-fluid rounded" src = "templates/Thumb2.png" width=200>
+            </a>
+            <figcaption>
+                Schiaparelli
+            </figcaption>
+          </figure>
+          <figure class = "figure">
+              <a href = {{syrtis_img}}>
+                <img class="img-responsive figure img img-fluid rounded" src = "templates/Thumb3.png" width=200>
+              </a>
+              <figcaption>
+                  Syrtis Major
+              </figcaption>
+          </figure>
+          <figure class = "figure">
+              <a href = {{marineris_img}}>
+                <img class="img-responsive figure img img-fluid rounded" src = "templates/Thumb4.png" width=200>
+              </a>
+              <figcaption>
+                  Valles Marineris
+              </figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+    <div class = "row">
+      <div class = "container-fluid col-sm-6">
+          <h4>Latest Mars News</h4>
+          <h6>{{article_title}}</h6>
+          <p>{{article_body}}</p>
+          <p>Source: <a href = {{article_link}}></a>{{article_link}}</p>
+      </div>
+      <div class = "container-fluid col-sm-6">
+          <h4>Mars Facts</h4>
+          <table>
+            {{mars_data_html}}
+          </table>
+          <figcaption class = "figure-caption text-right">
+            {{mars_data_link}}
+          </figcaption>
+      </div>
+    </div>
+    
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+  </body>
+
+</html>
