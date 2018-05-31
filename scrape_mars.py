@@ -35,7 +35,7 @@ def scrape():
     #Grabbing necessary content
     news_title = soup.find('div', class_= 'content_title').text.strip()
     news_body = soup.find('div', class_ = 'image_and_description_container').text.strip()
-    news_href = soup.find('div', class_= 'content_title').a['href']
+    news_href = mars_url[:-2] + soup.find('div', class_= 'content_title').a['href']
 
     #defining the path for the next web scrape
     jpl_url = "https://www.jpl.nasa.gov/spaceimages/?search=&category=Mars"
@@ -129,9 +129,9 @@ def scrape():
     i = 1
     for url in thumb_urls:
         response = requests.get(url, stream = True)
-        with open(f"templates\Thumb{i}.png", 'wb') as out_file:
+        with open(f"static\Thumb{i}.png", 'wb') as out_file:
             shutil.copyfileobj(response.raw, out_file)
-            time.sleep(1)
+            time.sleep(5)
         i += 1
 
     print("getting the links for the enhanced images")

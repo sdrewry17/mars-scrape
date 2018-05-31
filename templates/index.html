@@ -21,13 +21,14 @@
         </div>
       </nav>
     </div>
-    <div class = "row">
+    <div class = "row container-fluid">
       <div class = "container-fluid col-sm-8">
+        <div class = "container-fluid">
           <br>
           <h2 class = "jumbotron">Mars Analysis</h2>
           <figure class = "figure">
               <img class = "figure img img-fluid rounded" src = {{img_url}} width=600>
-              <figcaption class = "figure-caption text-right">Source: Astrogeology {{astro_url}}</figcaption>
+              <figcaption class = "figure-caption text-left">Source: Astrogeology {{astro_url}}</figcaption>
           </figure>
           <h3>Mars is an interesting place!</h3>
           <p>This was a useful project showcasing various tools to collect, store, and return live data to a webpage.</p>
@@ -40,19 +41,29 @@
               <li>Flask - Python library used to connect html to python objects</li>
               <li>MongoDB - NoSQL database</li>
               <li>PyMongo - Python connector for MongoDB</li>
-              <li>Flask PyMongo - Python connector MongoDB using Flask</li>
           </ul>
+        </div>
+        <br>
+        <div class = "container-fluid">
+            <h4>Latest Mars News</h4>
+            <h6>{{article_title}}</h6>
+            <p>{{article_body}}</p>
+            <p>Source: <a href = {{article_link}}></a>{{article_link}}</p>
+        </div>
       </div>
       <div class = "container-fluid col-sm-4">
-        <div>
+        <div class = "container-fluid">
           <h4>Current Mars Weather</h4>
           <p>{{weather}}</p>
           <a href: "https://twitter.com/MarsWxReport" >@{{tweeter}}</a>
         </div>
-        <div>
+        <br>
+        <div class = "container-fluid">
+          <h4>Mars Hemispheres</h4>
+          <p>Click for high-resolution images</p>
           <figure class = "figure">
             <a href = {{cerberus_img}}>
-              <img class="img-responsive figure img img-fluid rounded" src = "templates/Thumb1.png" width=200>
+              <img class="img-responsive figure img img-fluid rounded" src = "static/Thumb1.png" width=200>
             </a>
             <Figcaption>
                 Cerberus
@@ -60,7 +71,7 @@
           </figure>
           <figure class = "figure">
             <a href = {{schiaparelli_img}}>
-              <img class="img-responsive figure img img-fluid rounded" src = "templates/Thumb2.png" width=200>
+              <img class="img-responsive figure img img-fluid rounded" src = "static/Thumb2.png" width=200>
             </a>
             <figcaption>
                 Schiaparelli
@@ -68,7 +79,7 @@
           </figure>
           <figure class = "figure">
               <a href = {{syrtis_img}}>
-                <img class="img-responsive figure img img-fluid rounded" src = "templates/Thumb3.png" width=200>
+                <img class="img-responsive figure img img-fluid rounded" src = "static/Thumb3.png" width=200>
               </a>
               <figcaption>
                   Syrtis Major
@@ -76,33 +87,24 @@
           </figure>
           <figure class = "figure">
               <a href = {{marineris_img}}>
-                <img class="img-responsive figure img img-fluid rounded" src = "templates/Thumb4.png" width=200>
+                <img class="img-responsive figure img img-fluid rounded" src = "static/Thumb4.png" width=200>
               </a>
               <figcaption>
                   Valles Marineris
               </figcaption>
           </figure>
         </div>
-      </div>
-    </div>
-    <div class = "row">
-      <div class = "container-fluid col-sm-6">
-          <h4>Latest Mars News</h4>
-          <h6>{{article_title}}</h6>
-          <p>{{article_body}}</p>
-          <p>Source: <a href = {{article_link}}></a>{{article_link}}</p>
-      </div>
-      <div class = "container-fluid col-sm-6">
+        <br>
+        <div class = "container-fluid">
           <h4>Mars Facts</h4>
-          <table>
-            {{mars_data_html}}
-          </table>
-          <figcaption class = "figure-caption text-right">
+          {{mars_data_html | safe}}
+          <figcaption class = "figure-caption text-left">
             {{mars_data_link}}
           </figcaption>
+       </div>
       </div>
     </div>
-    
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

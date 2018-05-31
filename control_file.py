@@ -16,7 +16,7 @@ client = pymongo.MongoClient(conn)
 db = client.mars_db
 collection = db.items
 
-mongo = PyMongo(app)
+# mongo = PyMongo(app)
 
 # create route that queries the mongo database and pass data into an HTML template
 @app.route("/")
@@ -41,10 +41,10 @@ def index():
 
 @app.route("/scrape")
 def scrape():
-    mars_db = mongo.collection
+    mars_db = collection
     mars_data = scrape_mars.scrape()
-    mars_db.update_one({}, {"$set":mars_data}, upsert = True)
     time.sleep(5)
+    mars_db.update_one({}, {"$set":mars_data}, upsert = True)
 
     return redirect("http://localhost:5000/", code=302)
 
